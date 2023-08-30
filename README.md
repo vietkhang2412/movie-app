@@ -1,10 +1,12 @@
 # movie_app
 
-A new Flutter project.
+A Flutter project Movie
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Image review layout "Popular list"
+
+![Screenshot (42)](https://github.com/vietkhang2412/movie-app/assets/117133539/e98818b9-01c3-4d2a-a1b7-29301c007fbd)
 
 A few resources to get you started if this is your first Flutter project:
 
