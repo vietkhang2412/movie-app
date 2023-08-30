@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/models/movie.dart';
@@ -60,7 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> refresh() async {
     listMovie.clear();
     setState(() {
-      currentPage = 1;
+      currentPage = Random().nextInt(20) + 1;
+      print("$currentPage");
     });
     try {
       var response = await Dio().get(urlAPI + currentPage.toString());
@@ -144,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: (listMovie.isNotEmpty)
                     ? GridView.builder(
                         controller: controller,
-                        itemCount: listMovie.length + 2,
+                        itemCount: listMovie.length + 1,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
